@@ -1,0 +1,33 @@
+.r-cor{
+background-color: #1abc9c;
+}
+.r-cor-letra-fundo{
+  background-color: #f1c40f;
+}
+ul.social-network{
+  list-style: none;
+  padding: 0;
+}
+ul.social-network li
+{
+  display: inline;
+  margin: 0;
+  padding: 5px;
+}
+.fa{
+  font-size: 25pt;
+  color: aliceblue;
+}
+.fa-instagram:hover{
+  color: black;
+
+}
+.fa-github:hover{
+  color: black;
+
+}
+
+.fa-linkedin:hover{
+  color: black;
+
+}
