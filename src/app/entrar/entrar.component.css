@@ -1,9 +1,23 @@
-#img-bg{
-  background-image: url('/assets/img/foto.jpg');
+#img-bg1{
+  background-image: url('https://i.pinimg.com/564x/e7/58/aa/e758aa90782b891f25a757c22d0e57ae.jpg');
 
   min-height: 100vh;
 
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+#img-bg2{
+  background-image: url('https://i.pinimg.com/564x/31/71/5c/31715ce81845b9f128704a185527e8cd.jpg');
+  min-height: 100vh;
+
+  background-position-y: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#img-bg3{
+  background-color: rgba(250, 167, 167, 0.87);
+  border-style: ridge;
+  border-radius: 50px;
+
 }
