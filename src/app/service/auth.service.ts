@@ -18,7 +18,7 @@ export class AuthService {
 
   cadastrar(usuario: Usuario): Observable<Usuario> {
     // return this.http.post<Usuario>('https://backend34.herokuapp.com/api/v1/usuario/salvar', usuario)
-    return this.http.post<Usuario>('https://projetinhoblogpessoal.herokuapp.com/usuarios/cadastrar', usuario)
+    return this.http.post<Usuario>('http://localhost:8080/usuarios/cadastrar', usuario)
   }
 
   logado(){
