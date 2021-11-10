@@ -13,12 +13,11 @@ export class AuthService {
   constructor(private http: HttpClient) { }
 
   entrar(credenciais: CredenciaisDTO): Observable<CredenciaisDTO> {
-    return this.http.put<CredenciaisDTO>('https://backend34.herokuapp.com/api/v1/usuario/credenciais', credenciais)
+    return this.http.put<CredenciaisDTO>('https://meublogkaslow.herokuapp.com/usuarios/logar', credenciais)
   }
 
   cadastrar(usuario: Usuario): Observable<Usuario> {
-    // return this.http.post<Usuario>('https://backend34.herokuapp.com/api/v1/usuario/salvar', usuario)
-    return this.http.post<Usuario>('http://localhost:8080/usuarios/cadastrar', usuario)
+    return this.http.post<Usuario>('https://meublogkaslow.herokuapp.com/usuarios/cadastrar', usuario)
   }
 
   logado(){
