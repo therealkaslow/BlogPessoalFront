@@ -1,7 +1,6 @@
 import { AuthService } from './../service/auth.service';
-import { UsuarioLoginDTO } from './../model/UsuarioLoginDTO';
 import { Component, OnInit } from '@angular/core';
-import { CredenciaisDTO } from '../model/CredenciaisDTO';
+import { UsuarioLogin } from '../model/UsuarioLogin';
 import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
 
@@ -12,7 +11,7 @@ import { environment } from 'src/environments/environment.prod';
 })
 export class EntrarComponent implements OnInit {
 
-  usuarioLogin: CredenciaisDTO = new CredenciaisDTO();
+  usuarioLogin: UsuarioLogin = new UsuarioLogin();
 
   constructor(
     private router: Router,
@@ -24,12 +23,13 @@ export class EntrarComponent implements OnInit {
   }
 
   entrar(){
-    this.auth.entrar(this.usuarioLogin).subscribe((resp: CredenciaisDTO) => {
+    console.log(this.usuarioLogin)
+    this.auth.entrar(this.usuarioLogin).subscribe((resp: UsuarioLogin) => {
       this.usuarioLogin = resp;
       environment.token = this.usuarioLogin.token;
       environment.id = this.usuarioLogin.idUsuario;
       environment.nome = this.usuarioLogin.nome;
-      environment.email = this.usuarioLogin.email;
+      environment.email = this.usuarioLogin.usuario;
       environment.tipo = this.usuarioLogin.tipo;
       environment.foto = this.usuarioLogin.foto;
 

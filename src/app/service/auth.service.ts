@@ -2,7 +2,7 @@ import { environment } from 'src/environments/environment.prod';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { CredenciaisDTO } from '../model/CredenciaisDTO';
+import { UsuarioLogin } from '../model/UsuarioLogin';
 import { Usuario } from '../model/Usuario';
 
 @Injectable({
@@ -12,8 +12,8 @@ export class AuthService {
 
   constructor(private http: HttpClient) { }
 
-  entrar(credenciais: CredenciaisDTO): Observable<CredenciaisDTO> {
-    return this.http.put<CredenciaisDTO>('https://meublogkaslow.herokuapp.com/usuarios/logar', credenciais)
+  entrar(usuarioLogin: UsuarioLogin): Observable<UsuarioLogin> {
+    return this.http.post<UsuarioLogin>('https://meublogkaslow.herokuapp.com/usuarios/logar', usuarioLogin)
   }
 
   cadastrar(usuario: Usuario): Observable<Usuario> {

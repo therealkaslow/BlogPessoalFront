@@ -1,5 +1,5 @@
-export class CredenciaisDTO {
-  public email: string;
+export class UsuarioLogin {
+  public usuario: string;
   public foto: string;
   public idUsuario: number;
   public nome: string;
