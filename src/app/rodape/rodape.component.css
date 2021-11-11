@@ -15,7 +15,7 @@ ul.social-network li{
   padding: 10px;
 }
 .fa-facebook-square:hover{
-  color: #3b5998;
+  color: #144abe;
 }
 
 .fa-instagram:hover{
@@ -24,4 +24,8 @@ ul.social-network li{
 
 .fa-linkedin-square:hover{
   color: #0072b1;
+}
+.bg-rodape{
+ background-color: #e7bb0a;
+ border-style: double;
 }
